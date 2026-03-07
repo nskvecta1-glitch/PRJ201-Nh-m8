@@ -16,7 +16,7 @@ BEFORE OPENING IN NETBEANS — do this ONE TIME in a terminal:
      -Dversion=4.0 ^
      -Dpackaging=jar
 
-   (Linux/Mac — replace ^ with \ for line continuation)
+   (Linux/Mac — replace ^ with \ for line continuation)       // dont use this fr
 
 2. Run the SQL schema in SSMS:
    Open DeliveryAutoAlert_Schema.sql → Execute (F5)
