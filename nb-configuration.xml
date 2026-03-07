@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<!--
+    This file is used by NetBeans IDE to remember project-level configuration.
+    It tells NetBeans which server to deploy to and what context path to use.
+    Commit this file to version control so teammates don't have to reconfigure.
+-->
+<properties>
+    <entry key="netbeans.hint.j2eeVersion">1.7-web</entry>
+    <entry key="netbeans.hint.deploy.server">Tomcat</entry>
+</properties>
