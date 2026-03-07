@@ -135,6 +135,16 @@ CREATE TABLE Payments (
     status NVARCHAR(50),
     FOREIGN KEY (invoice_id) REFERENCES Invoices(invoice_id)
 );
+CREATE TABLE CODReconciliation (
+    cod_id INT PRIMARY KEY IDENTITY,
+    order_id INT,
+    amount DECIMAL(12,2),
+    collected_date DATETIME DEFAULT GETDATE(),
+    status NVARCHAR(50),
+    note NVARCHAR(255),
+
+    FOREIGN KEY (order_id) REFERENCES DeliveryOrders(order_id)
+);
 CREATE TABLE AlertRules (
     rule_id INT PRIMARY KEY IDENTITY,
     rule_name NVARCHAR(150),
