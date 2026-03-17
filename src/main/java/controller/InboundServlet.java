@@ -32,8 +32,10 @@ public class InboundServlet extends HttpServlet {
                     req.setAttribute("warehouses", whService.getAll());
                     req.getRequestDispatcher("/warehouse/inboundForm.jsp").forward(req, resp); break;
                 default:
-                    req.setAttribute("docs", service.getAllInbound());
-                    req.getRequestDispatcher("/warehouse/inboundList.jsp").forward(req, resp);
+                    req.setAttribute("docs", service.getAllOutbound());
+                    req.setAttribute("inboundDocs", service.getAllInbound());
+                    req.setAttribute("tab", "inbound");
+                    req.getRequestDispatcher("/warehouse/stockDocs.jsp").forward(req, resp);
             }
         } catch (Exception e) { throw new ServletException(e); }
     }

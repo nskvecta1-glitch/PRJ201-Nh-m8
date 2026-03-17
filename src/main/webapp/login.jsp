@@ -2,33 +2,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login - DeliveryAutoAlert</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/style.css">
-    <style>
-        .login-wrap { max-width: 380px; margin: 100px auto; }
-        .login-title { text-align:center; margin-bottom: 24px; font-size:22px; color:#2c3e50; }
-    </style>
+  <title>Login — DeliveryAutoAlert</title>
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/style.css">
 </head>
 <body>
-<div class="login-wrap">
-    <div class="login-title">DeliveryAutoAlert</div>
-    <div class="card">
-        <h3>Sign In</h3>
-        <% if(request.getAttribute("error") != null) { %>
-        <div class="alert-error">${error}</div>
-        <% } %>
-        <form method="post" action="${pageContext.request.contextPath}/LoginServlet">
-            <div class="form-group">
-                <label>Username</label>
-                <input type="text" name="username" required autofocus />
-            </div>
-            <div class="form-group">
-                <label>Password</label>
-                <input type="password" name="password" required />
-            </div>
-            <button type="submit" class="btn btn-primary" style="width:100%">Login</button>
-        </form>
+<div class="login-page">
+  <div class="login-wrap">
+    <div class="login-logo">
+      <div class="login-logo-mark"></div>
+      <h1>DeliveryAutoAlert</h1>
+      <p>Auto Alert &amp; Reconciliation System</p>
     </div>
+    <div class="login-box">
+      <h3>Sign in to your account</h3>
+      <% if(request.getAttribute("error") != null) { %>
+      <div class="alert-error">${error}</div>
+      <% } %>
+      <form method="post" action="${pageContext.request.contextPath}/LoginServlet">
+        <div class="form-group">
+          <label>Username</label>
+          <input type="text" name="username" placeholder="Enter username" required autofocus />
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" name="password" placeholder="Enter password" required />
+        </div>
+        <button type="submit" class="btn btn-primary">Sign in</button>
+      </form>
+    </div>
+  </div>
 </div>
 </body>
 </html>

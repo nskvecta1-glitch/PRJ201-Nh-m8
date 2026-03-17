@@ -39,7 +39,9 @@ public class OutboundServlet extends HttpServlet {
                     req.getRequestDispatcher("/search/searchStockDocs.jsp").forward(req, resp); break;
                 default:
                     req.setAttribute("docs", service.getAllOutbound());
-                    req.getRequestDispatcher("/warehouse/outboundList.jsp").forward(req, resp);
+                    req.setAttribute("inboundDocs", service.getAllInbound());
+                    req.setAttribute("tab", "outbound");
+                    req.getRequestDispatcher("/warehouse/stockDocs.jsp").forward(req, resp);
             }
         } catch (Exception e) { throw new ServletException(e); }
     }
